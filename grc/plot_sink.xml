@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<block>
+	<name>Plot Sink</name>
+	<key>plot_sink</key>
+	<category>SBHS</category>
+	<import>from sbhs import plot_sink</import>
+	<make>#set $parent = 'self'
+plot_sink.plot_sink_$(type.fcn)(
+	$(parent).GetWin(),
+	title=$title,
+	bgcolor=$bgcolor,
+	linecolor=$linecolor
+)
+$(parent).Add(self.$(id).win)</make>
+	<param>
+		<name>Type</name>
+		<key>type</key>
+		<type>enum</type>
+		<option>
+			<name>Complex</name>
+			<key>complex</key>
+			<opt>fcn:c</opt>
+		</option>
+		<option>
+			<name>Float</name>
+			<key>float</key>
+			<opt>fcn:f</opt>
+		</option>
+		<option>
+			<name>Int</name>
+			<key>int</key>
+			<opt>fcn:i</opt>
+		</option>
+		<option>
+			<name>Short</name>
+			<key>short</key>
+			<opt>fcn:s</opt>
+		</option>
+		<option>
+			<name>Byte</name>
+			<key>byte</key>
+			<opt>fcn:b</opt>
+		</option>
+	</param>
+	<param>
+		<name>Title</name>
+		<key>title</key>
+		<value>Title of the Plot</value>
+		<type>string</type>
+	</param>
+	<param>
+		<name>Background Color</name>
+		<key>bgcolor</key>
+		<value>black</value>
+		<type>string</type>
+		<option>
+			<name>Black</name>
+			<key>black</key>			 
+		</option>	
+		<option>
+			<name>White</name>
+			<key>white</key>			 
+		</option>
+		<option>
+			<name>Red</name>
+			<key>red</key>			 
+		</option>	
+		<option>
+			<name>Green</name>
+			<key>green</key>			 
+		</option>
+		<option>
+			<name>Blue</name>
+			<key>blue</key>			 
+		</option>
+		<option>
+			<name>Cyan</name>
+			<key>cyan</key>			 
+		</option>
+		<option>
+			<name>Yellow</name>
+			<key>yellow</key>			 
+		</option>
+		<option>
+			<name>Magenta</name>
+			<key>magenta</key>			 
+		</option>
+	</param>
+	<param>
+		<name>Line Color</name>
+		<key>linecolor</key>
+		<value>yellow</value>
+		<type>string</type>
+		<option>
+			<name>Black</name>
+			<key>black</key>			 
+		</option>	
+		<option>
+			<name>White</name>
+			<key>white</key>			 
+		</option>
+		<option>
+			<name>Red</name>
+			<key>red</key>			 
+		</option>	
+		<option>
+			<name>Green</name>
+			<key>green</key>			 
+		</option>
+		<option>
+			<name>Blue</name>
+			<key>blue</key>			 
+		</option>
+		<option>
+			<name>Cyan</name>
+			<key>cyan</key>			 
+		</option>
+		<option>
+			<name>Yellow</name>
+			<key>yellow</key>			 
+		</option>
+		<option>
+			<name>Magenta</name>
+			<key>magenta</key>			 
+		</option>	
+	</param>
+	<sink>
+		<name>in</name>
+		<type>$type</type>
+		<vlen>1</vlen>
+	</sink>
+	<doc>
+Read Sample from the input stream and plot 
+the data in an x-y plot with time on the x axis.
+</doc>
+</block>
