@@ -78,7 +78,7 @@ void sbhs_device_source::search_device()
 			strcat(set_tty,d_tty);
 			strcat(set_tty," 9600 cs8\0");
 			system(set_tty);					
-			break;
+			break;create_file()
 		}
 	}
 
@@ -141,7 +141,9 @@ sbhs_device_source::sbhs_device_source (int fan_speed,int heater_temperature)
 {	 	
 	search_device();
 
-	initialize_device();		
+	initialize_device();	
+
+	create_file();	
 
 	set_fan_speed(fan_speed);
 

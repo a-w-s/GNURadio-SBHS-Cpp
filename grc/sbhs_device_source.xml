@@ -15,7 +15,7 @@
 		<type>int</type>
 	</param> 
 	<param>
-		<name>Heater Temperature</name>
+		<name>Heater Value</name>
 		<key>heater_temperature</key>
 		<value>0</value>
 		<type>int</type>
