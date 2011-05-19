@@ -1,7 +1,7 @@
 Introduction
 ============
 
-GNURadio-SBHS-C++ contains the setup files written in C++ and python for installing Data Acquisition Block for Single Board Heater System (SBHS) in GNURadio.  There are two blocks;
+GNURadio-SBHS-Cpp contains the setup files written in C++ and python for installing Data Acquisition Block for Single Board Heater System (SBHS) in GNURadio.  There are two blocks;
 
 	1. SBHS Source (C++)      - Acts as a source for the device.
 	2. Plot Sink   (Python)   - Plots the temperature reading against time.
