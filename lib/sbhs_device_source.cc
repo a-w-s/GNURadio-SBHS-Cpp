@@ -78,7 +78,7 @@ void sbhs_device_source::search_device()
 			strcat(set_tty,d_tty);
 			strcat(set_tty," 9600 cs8\0");
 			system(set_tty);					
-			break;create_file()
+			break;
 		}
 	}
 
